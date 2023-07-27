@@ -5,17 +5,29 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Fruits</title>
     <link href="https://cdn.jsdelivr.net/npm/daisyui@3.4.0/dist/full.css" rel="stylesheet" type="text/css" />
-<script src="https://cdn.tailwindcss.com"></script>
+    
 
-<script src="https://kit.fontawesome.com/11ca9de876.js" crossorigin="anonymous"></script>
+    <script src="https://kit.fontawesome.com/11ca9de876.js" crossorigin="anonymous"></script>
 
-<link rel="preconnect" href="https://fonts.googleapis.com">
-<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-<link href="https://fonts.googleapis.com/css2?family=EB+Garamond:wght@600;700;800&family=Lato:wght@700&display=swap" rel="stylesheet">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=EB+Garamond:wght@600;700;800&family=Lato:wght@700&display=swap" rel="stylesheet">
+      
+    <!-- css framework -->
+    <script src="https://cdn.tailwindcss.com"></script>
 
     <style>
         .font-family{
         font-family: 'Lato';
+        }
+        @media screen and (min-width: 350px) and (max-width: 976px) {  
+          .sm-text-align-center {
+            text-align: center;
+          }
+
+          .sm-pt-8 {
+            padding-top: 20px;
+          }
         }
     </style>
 </head>
@@ -24,7 +36,7 @@
         <nav>
             <!-- navigation ber -->
 
-            <div class="navbar max-w-screen-xl mx-auto my-8 bg-[#F85559] rounded-full">
+            <div class="navbar max-w-screen-xl mx-auto my-8 bg-[#F85559]  rounded-full">
                 <div class="navbar hidden lg:flex flex-1">
                   <ul class="menu menu-horizontal flex-1 text-white  px-1">
                     <li><a>Home</a></li>
@@ -40,24 +52,25 @@
                     <h1 class=" text-3xl font-extrabold text-white">Fruit Burst</h1>
                 </div>
                 
-                <div class="px-1 flex-1 ">
-                  <input class="lg:w-96 h-12 rounded-full pl-8" type="search" placeholder="Search here" name="" id="">
+                <div class="px-1 flex-1 hidden md:block lg:block">
+                  <input class="lg:w-96  h-12 rounded-full pl-8" type="search" placeholder="Search here" name="" id="">
                  
-                    <button class=" lg:-ml-12 -ml-6 btn-ghost"><i class="fa-solid fa-magnifying-glass"></i></button>
-                 
+                    <button class=" lg:-ml-12 -ml-6 btn-ghost"><i class="fa-solid fa-magnifying-glass"></i></button> 
                 </div>
+
+                <i class="font-semibold text-4xl text-white lg:hidden pr-4 cursor-pointer fa-solid fa-bars"></i>
               </div>
         </nav>
 
-        <!-- benner-section -->
+        <!-- banner-slider-section -->
 
         <section>
-          <div class="">
 
-            <div class="hero mt-12 max-w-screen-xl mx-auto">
+          <div class="">
+            <div class=" hero mt-12 max-w-screen-xl mx-auto ">
               <div class="hero-overlay bg-opacity-60"></div>
 
-             <div class="carousel wax-w-screen-xl h-96">
+             <div class="carousel wax-w-screen-xl min-h-full">
               <div id="slide1" class="carousel-item relative w-full">
                 <img src="./images/banner1.png" class="w-full" />
                 <div class="absolute flex justify-between transform -translate-y-1/2 left-5 right-5 top-1/2">
@@ -80,37 +93,37 @@
                 </div>
               </div> 
              </div>
-             <div class="hero-content text-center text-neutral-content">
-              <div class="max-w-xl">
-                <h1 class="mb-5 text-5xl font-extrabold text-white">Exotic tastes at yours doorstep</h1>
+             <div class="hero-content text-center text-neutral-content pb-32 pt-8">
+              <div class="max-w-screen-xl">
+                <h1 class="mb-5 text-5xl font-extrabold text-white">Exotic tastes at yours <br> doorstep</h1>
                 <p class="mb-5 text-white">We supply highly quality organic products</p>
                <button class="btn text-white bg-[#F85559] border-none" >Shop now</button>
               </div>
             </div>
           </div>
-        </div>
+          </div>
 
          <!-- bonus-section -->
 
-              <div class= "">
-                <div class="lg:grid lg:grid-flow-col hidden shadow-md         max-w-screen-xl mx-60 pl-12">
-                 <div class="py-8">
+              <div class= "relative">
+                <div class="lg:grid bg-[#FFF] -mt-24 lg:grid-flow-col hidden shadow-md         max-w-screen-xl mx-60 pl-12">
+                 <div class="py-4">
                    <img src="./images/fruit1.png" alt="">
                    <p class="pl-8 pt-4">Strawberry</p>
                  </div>
-                 <div class="py-8">
+                 <div class="py-4">
                    <img src="./images/fruit2.png" alt="">
                    <p class="pl-8 pt-4">Orange</p>
                  </div>
-                 <div class="py-8">
+                 <div class="py-4">
                    <img src="./images/fruit3.png" alt="">
                    <p class="pl-8 pt-4">Mango</p>
                  </div>
-                 <div class="py-8">
+                 <div class="py-4">
                    <img src="./images/fruit4.png" alt="">
                    <p class="pl-8 pt-4">Strawberry</p>
                  </div>
-                 <div class="py-8">
+                 <div class="py-4">
                    <img src="./images/fruit5.png" alt="">
                    <p class="pl-8 pt-4">Mango</p>
                  </div>
@@ -126,28 +139,28 @@
           <div class="flex justify-between flex-col items-center lg:flex-row">
             <div class="">
               
-              <h2 class="text-3xl font-extrabold text-[#121212]">Deal of the day</h2>            
-              <p class="text-[#12121299] pt-4">Contrary to popular belief, is not simply random text. It has roots in a piece of classical <br> Latin literature from 45 BC, making it over 2000 years old.</p>
+              <h2 class="text-3xl sm-text-align-center font-extrabold text-[#121212]">Deal of the day</h2>            
+              <p class="text-[#12121299] sm-text-align-center  pt-4">Contrary to popular belief, is not simply random text. It has roots in a piece of classical <br> Latin literature from 45 BC, making it over 2000 years old.</p>
                 
             </div>
             <div>
               <!-- countdown start -->
-              <div class="grid grid-flow-col gap-5 text-center auto-cols-max">
+              <div class="grid grid-flow-col sm-pt-8  gap-5 text-center auto-cols-max">
                 <div class="flex flex-col">
                   <span class="countdown font-mono text-3xl font-extrabold text-[#121212]">
-                    <span style="--value:15;"></span>
+                    <span style="--value:15;"></span>:
                   </span>
                   days
                 </div> 
                 <div class="flex flex-col">
                   <span class="countdown font-mono text-3xl font-extrabold text-[#121212]">
-                    <span style="--value:10;"></span>
+                    <span style="--value:10;"></span>:
                   </span>
                   hours
                 </div> 
                 <div class="flex flex-col">
                   <span class="countdown font-mono text-3xl font-extrabold text-[#121212]">
-                    <span style="--value:24;"></span>
+                    <span style="--value:24;"></span>:
                   </span>
                   minutes
                 </div> 
@@ -542,55 +555,64 @@
           </div>
           <div class="grid lg:grid-flow-col">
             <div class="pt-12">
-              <div class="flex pb-8 ">
-                <img class="pr-4 " src="./images/group 1.svg" alt="">
-                
+              <div class="flex pb-8  justify-center">
+                <img class="pr-4" src="./images/group 1.svg" alt="">
                 <div>
-                  <h4 class="text-2xl font-extrabold text-[#121212]">Dedicated Team</h4>
+                  <h4 class="text-2xl pb-4 sm-text-align-center font-extrabold text-[#121212] ">Dedicated Team</h4>
+                  <div class="h-[1px] w-28 bg-black">
+                  
+                  </div>
                   <p class="text-[#12121299] pt-4">Professional employees are there for you to pick <br> the most amazing and fresh fruits.</p>
                 </div>
               </div>
-              <div class="flex pb-8">
+              <div class="flex justify-center  pb-8">
                 <img class="pr-4 " src="./images/love 1.svg" alt="">
                 
                 <div>
-                  <h4 class="text-2xl font-extrabold text-[#121212]">Fresh is Best</h4>
-                  <p class="text-[#12121299] pt-4">Professional employees are there for you to pick <br> the most amazing and fresh fruits.</p>
+                  <h4 class="text-2xl sm-text-align-center pb-4 font-extrabold text-[#121212]">Fresh is Best</h4>
+                  
+                  <div class="h-[1px] w-28 bg-black"></div>
+                  <p class="text-[#12121299] sm-text-align-center pt-4">Professional employees are there for you to pick <br> the most amazing and fresh fruits.</p>
                 </div>
               </div>
-              <div class="flex pb-8">
+              <div class="flex justify-center pb-8">
                 <img class="pr-4 " src="./images/gift-box 1.svg" alt="">
                 
                 <div>
-                  <h4 class="text-2xl font-extrabold text-[#121212]">Gift Certificates</h4>
-                  <p class="text-[#12121299] pt-4">Professional employees are there for you to pick <br> the most amazing and fresh fruits.</p>
+                  <h4 class="text-2xl pb-4 sm-text-align-center font-extrabold text-[#121212]">Gift Certificates</h4>
+                  <div class="h-[1px] w-28 bg-black"></div>
+                  <p class="text-[#12121299] sm-text-align-center pt-4">Professional employees are there for you to pick <br> the most amazing and fresh fruits.</p>
                 </div>
               </div>
             </div>
-            <div class="pt-12">
+            <div class="pt-12 flex justify-center items-center">
               <img class="px-12" src="./images/whychoose1.png" alt="">
             </div>
             <!-- move-start -->
             <div class="">
               <div class="pt-12 text-end">
-                <div class="flex pb-8">  
+                <div class="flex justify-center pb-8">  
                   <div>
-                    <h4 class="text-2xl font-extrabold text-[#121212]">Integrated Supplier</h4>
-                    <p class="text-[#12121299] pt-4">Professional employees are there for you to pick <br> the most amazing and fresh fruits.</p>
+                    <h4 class="pb-4 text-2xl sm-text-align-center font-extrabold text-[#121212] ">Integrated Supplier</h4>
+                    <div class="h-[1px] w-28 bg-black ml-auto"></div>
+                    <p class="text-[#12121299] sm-text-align-center pt-4">Professional employees are there for you to pick <br> the most amazing and fresh fruits.</p>
                   </div>
                   <img class="pl-4" src="./images/fruit 1.svg" alt="">
+                  
                 </div>
-                <div class="flex pb-8">               
+                <div class="flex justify-center pb-8">               
                  <div>
-                    <h4 class="text-2xl font-extrabold text-[#121212]">Sustainable Practice</h4>
-                    <p class="text-[#12121299] pt-4">Professional employees are there for you to pick <br> the most amazing and fresh fruits.</p>
+                    <h4 class="text-2xl sm-text-align-center pb-4 font-extrabold text-[#121212]">Sustainable Practice</h4>
+                    <div class="h-[1px] w-28 bg-black ml-auto"></div>
+                    <p class="text-[#12121299] sm-text-align-center pt-4">Professional employees are there for you to pick <br> the most amazing and fresh fruits.</p>
                   </div>
                   <img class="pl-4 " src="./images/ice-cream 1.svg" alt="">
                 </div>
-                <div class="flex pb-8">                 
+                <div class="flex justify-center pb-8">                 
                   <div>
-                    <h4 class="text-2xl font-extrabold text-[#121212]">The Benefits Only</h4>
-                    <p class="text-[#12121299] pt-4">Professional employees are there for you to pick <br> the most amazing and fresh fruits.</p>
+                    <h4 class="text-2xl pb-4 sm-text-align-center font-extrabold text-[#121212]">The Benefits Only</h4>
+                    <div class="h-[1px] w-28 bg-black ml-auto"></div>
+                    <p class="text-[#12121299] sm-text-align-center pt-4">Professional employees are there for you to pick <br> the most amazing and fresh fruits.</p>
                   </div>
                   <img class="pl-4" src="./images/like 1.svg" alt="">
                 </div>
@@ -611,9 +633,9 @@
      </div>
       <h1 class=" text-3xl font-extrabold text-white">Fruit Burst</h1>
   </div>
-      </div>
+      
       <div>
-          <div class="grid lg:grid-cols-6  gap-8 text-white">
+          <div class="grid grid-cols-4  lg:grid-cols-6 gap-8 text-white">
             <a class="link link-hover">Home</a> 
             <a class="link link-hover">About us</a> 
             <a class="link link-hover">Shop</a> 
